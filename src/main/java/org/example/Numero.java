@@ -21,15 +21,15 @@ public class Numero {
     public int getNum3() {
         return num3;
     }
-    public static int numero_mayor(int a, int b, int c) {
-        int num = 0;
-        if (a >= b && a >= c) {
-            num = a;
-        } else if (b >= a && b >= c) {
-            num = b;
-        } else if (c >= b && c >= a) {
-            num = c;
+    public static int numero_mayor(Numero num) {
+        int n = 0;
+        if (num.getNum1() >= num.getNum2() && num.getNum1() >= num.getNum3()) {
+            n = num.getNum1();
+        } else if (num.getNum2() >= num.getNum1() && num.getNum2() >= num.getNum3()) {
+            n = num.getNum2();
+        } else if (num.getNum3() >= num.getNum2() && num.getNum3() >= num.getNum1()) {
+            n = num.getNum3();
         }
-        return num;
+        return n;
     }
 }
